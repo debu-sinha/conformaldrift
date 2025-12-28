@@ -7,7 +7,7 @@ name = "conformal-drift"
 version = "0.1.0"
 description = "Audit protocol for stress-testing conformal prediction guardrails under distribution shift"
 readme = "README.md"
-license = "MIT"
+license = {text = "MIT"}
 requires-python = ">=3.8"
 authors = [
     {name = "Debu Sinha", email = "debusinha2009@gmail.com"}
@@ -80,6 +80,8 @@ conformal-drift = "conformal_drift.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["."]
+include = ["conformal_drift*"]
+exclude = ["src*", "experiments*", "results*"]
 
 [tool.black]
 line-length = 100
