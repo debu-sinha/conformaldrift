@@ -1,0 +1,96 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "conformal-drift"
+version = "0.1.0"
+description = "Audit protocol for stress-testing conformal prediction guardrails under distribution shift"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.8"
+authors = [
+    {name = "Debu Sinha", email = "debusinha2009@gmail.com"}
+]
+maintainers = [
+    {name = "Debu Sinha", email = "debusinha2009@gmail.com"}
+]
+keywords = [
+    "conformal-prediction",
+    "distribution-shift",
+    "rag",
+    "hallucination-detection",
+    "uncertainty-quantification",
+    "nlp",
+    "machine-learning",
+    "ai-safety",
+    "calibration",
+    "guardrails"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Typing :: Typed",
+]
+dependencies = [
+    "numpy>=1.20.0",
+    "scipy>=1.7.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "black>=23.0.0",
+    "ruff>=0.1.0",
+    "mypy>=1.0.0",
+    "pre-commit>=3.0.0",
+]
+full = [
+    "torch>=1.10.0",
+    "transformers>=4.20.0",
+    "datasets>=2.0.0",
+    "sentence-transformers>=2.2.0",
+]
+docs = [
+    "mkdocs>=1.5.0",
+    "mkdocs-material>=9.0.0",
+    "mkdocstrings[python]>=0.24.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/debu-sinha/conformaldrift"
+Documentation = "https://github.com/debu-sinha/conformaldrift#readme"
+Repository = "https://github.com/debu-sinha/conformaldrift"
+Issues = "https://github.com/debu-sinha/conformaldrift/issues"
+Changelog = "https://github.com/debu-sinha/conformaldrift/blob/main/CHANGELOG.md"
+
+[project.scripts]
+conformal-drift = "conformal_drift.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+[tool.black]
+line-length = 100
+target-version = ["py38", "py39", "py310", "py311"]
+
+[tool.ruff]
+line-length = 100
+select = ["E", "F", "W", "I", "N", "D", "UP"]
+ignore = ["D100", "D104"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-v --tb=short"
