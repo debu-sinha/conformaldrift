@@ -1,0 +1,67 @@
+site_name: Conformal-Drift
+site_description: Audit protocol for stress-testing conformal prediction guardrails under distribution shift
+site_author: Debu Sinha
+site_url: https://debu-sinha.github.io/conformaldrift/
+
+repo_name: debu-sinha/conformaldrift
+repo_url: https://github.com/debu-sinha/conformaldrift
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            show_source: true
+            show_root_heading: true
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - admonition
+  - pymdownx.details
+  - tables
+
+nav:
+  - Home: index.md
+  - Getting Started: getting-started.md
+  - User Guide:
+      - Core Concepts: guide/concepts.md
+      - Shift Operators: guide/shift-operators.md
+      - Running Audits: guide/running-audits.md
+  - API Reference: api.md
+  - Examples: examples.md
+  - Contributing: contributing.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/debu-sinha/conformaldrift
+    - icon: fontawesome/brands/python
+      link: https://pypi.org/project/conformal-drift/
