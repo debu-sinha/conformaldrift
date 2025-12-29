@@ -23,7 +23,7 @@ from tqdm import tqdm
 # Add parent to path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from src.models.core_algorithm import (
+from src.detectors.crg_detector import (
     ConformalRAGGuardrails,
     CRGConfig,
     RAGExample

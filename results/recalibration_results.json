@@ -1,0 +1,63 @@
+{
+  "experiment": "recalibration_budget",
+  "guardrail": "Emb-Sim",
+  "source_distribution": "NQ",
+  "target_distribution": "RAGTruth",
+  "target_coverage": 0.95,
+  "k_values": [
+    0,
+    10,
+    25,
+    50,
+    100
+  ],
+  "settings": [
+    {
+      "k": 0,
+      "effective_coverage": 99.2,
+      "fpr": 42.3,
+      "threshold": 0.3757,
+      "n_recal_examples": 0
+    },
+    {
+      "k": 10,
+      "effective_coverage": 99.2,
+      "fpr": 42.3,
+      "threshold": 0.3757,
+      "n_recal_examples": 10
+    },
+    {
+      "k": 25,
+      "effective_coverage": 99.2,
+      "fpr": 42.3,
+      "threshold": 0.3757,
+      "n_recal_examples": 25
+    },
+    {
+      "k": 50,
+      "effective_coverage": 99.2,
+      "fpr": 42.3,
+      "threshold": 0.3757,
+      "n_recal_examples": 50
+    },
+    {
+      "k": 100,
+      "effective_coverage": 98.3,
+      "fpr": 42.3,
+      "threshold": 0.3774,
+      "n_recal_examples": 100
+    }
+  ],
+  "timestamp": "2025-12-28T22:50:23.784363",
+  "k_for_90pct_coverage": 0,
+  "analysis": {
+    "baseline_coverage_k0": 99.2,
+    "coverage_recovery": {
+      "0": 0.0,
+      "10": 0.0,
+      "25": 0.0,
+      "50": 0.0,
+      "100": -0.9
+    }
+  }
+}

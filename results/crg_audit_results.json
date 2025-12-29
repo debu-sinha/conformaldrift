@@ -1,0 +1,51 @@
+{
+  "experiment": "crg_audit_matrix",
+  "guardrail": "CRG",
+  "target_coverage": 95.0,
+  "threshold": 0.45711299777030945,
+  "settings": [
+    {
+      "setting": "NQ -> NQ (In-Dist)",
+      "n_test": 200,
+      "n_hallucinated": 100,
+      "n_faithful": 100,
+      "effective_coverage": 93.0,
+      "fpr": 93.0,
+      "threshold": 0.4571,
+      "delta_cov": -1.9999992847442627,
+      "validity_axis": "VALID",
+      "usability_axis": "UNUSABLE",
+      "verdict": "BLOCK",
+      "failure_mode": "F"
+    },
+    {
+      "setting": "NQ -> RAGTruth (Cross-Dataset)",
+      "n_test": 400,
+      "n_hallucinated": 200,
+      "n_faithful": 200,
+      "effective_coverage": 98.0,
+      "fpr": 0.0,
+      "threshold": 0.4571,
+      "delta_cov": 3.000001907348633,
+      "validity_axis": "VALID",
+      "usability_axis": "USABLE",
+      "verdict": "DEPLOY",
+      "failure_mode": "S"
+    },
+    {
+      "setting": "NQ -> HaluEval (RLHF)",
+      "n_test": 200,
+      "n_hallucinated": 94,
+      "n_faithful": 106,
+      "effective_coverage": 5.3,
+      "fpr": 12.3,
+      "threshold": 0.4571,
+      "delta_cov": -89.6808509528637,
+      "validity_axis": "INVALID",
+      "usability_axis": "USABLE",
+      "verdict": "BLOCK",
+      "failure_mode": "C"
+    }
+  ],
+  "timestamp": "2025-12-28T23:08:01.215314"
+}
